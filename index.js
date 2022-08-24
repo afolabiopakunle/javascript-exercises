@@ -1,43 +1,36 @@
-// Import stylesheets
-import './style.css';
-
-// Write Javascript code!
-const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
-
-// const team = [
-//   'Joe', 'Theo', 'Bea', 'Dyan', 'Afoo'
-// ]
-
-// function alphabetizeTeams(team) {
-//   return [...team].sort()
-// }
-
-// console.log(alphabetizeTeams(team));
-
-const staff = [
-  {
-    name: 'Wesley',
-    position: 'musician'
-  },
-  {
-    name: 'Tinubu',
-    position: 'pastor'
-  },
-  {
-    name: 'Afolabi',
-    position: 'developer'
-  },
-  ,
-  {
-    name: 'Michael',
-    position: 'developer'
-  },
-]
-
-function getMusicians(staff) {
-  return staff.filter(staff => staff.position == 'developer')
-  
+const session1 = {
+  team: 'Arsenal',
+  goals: 20,
+  assists: 17,
+  yellowCards: 23,
+  redCards: 12
 }
 
-console.log(getMusicians(staff))
+const session2 = {
+  team: 'Arsenal',
+  goals: 20,
+  assists: 17,
+  yellowCards: 23,
+  redCards: 12
+}
+
+const session3 = {
+  team: 'Arsenal',
+  goals: 20,
+  assists: 17,
+  yellowCards: 23,
+  redCards: 12
+}
+
+const totals = {};
+
+const scores = Object.keys(session1);
+
+for(let i = 0; i < scores.length; i++) {
+  let score = scores[i]
+  console.log(score)
+  if(isNaN(score[i])) {
+  totals[score] = session1[score] + session2[score] + session3[score]
+}
+}
+console.log(totals);
